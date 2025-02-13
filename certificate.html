@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: #fff;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            background: transparent;
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+            color: #ff9800;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #ddd;
+        }
+        .back-btn {
+    position: absolute;
+    right: 20px;  /* Keep it on the right */
+    top: 20px;
+    text-decoration: none;
+    color: #ff9800;
+    font-size: 1.2rem;
+    background: none;  /* Removed background */
+    padding: 8px 15px;
+    border: none;  /* Removed border */
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+
+
+
+
+       
+
+        .filter-section {
+            margin: 20px;
+        }
+
+        #searchBar {
+            width: 60%;
+            padding: 12px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: 0.3s ease-in-out;
+        }
+        #searchBar:focus {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(255, 152, 0, 0.8);
+        }
+        #searchBar::placeholder {
+            color: #aaa;
+        }
+
+        .certifications {
+            padding: 40px 10%;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 65px;
+            justify-items: center;
+        }
+
+        .cert-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            padding: 20px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 350px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: 0.3s ease-in-out;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(255, 152, 0, 0.7);
+        }
+
+        .cert-icon {
+            font-size: 2.5rem;
+            color: #ff9800;
+            flex-shrink: 0;
+        }
+
+        .cert-content h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .cert-content p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        .download-btn {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            background: rgba(255, 152, 0, 0.2);
+            border: none;
+            padding: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            font-size: 1rem;
+            color: #ff9800;
+        }
+
+        .download-btn:hover {
+            background: #ff9800;
+            color: #000;
+        }
+    </style>
+
+    <header>
+        <h1>📜 My Certifications</h1>
+        <p class="subtitle">Here are my achievements, skills, and progress in various fields.</p>
+        <a href="skills.html" class="back-btn"><i class="fas fa-arrow-left"></i> Skills</a>
+    </header>
+
+    <section class="filter-section">
+        <input type="text" id="searchBar" placeholder="🔍 Search certifications..." onkeyup="filterCertifications()">
+    </section>
+
+    <section class="certifications">
+        <div class="cert-grid">
+            <div class="cert-card" data-name="Data Analytics">
+                <i class="fas fa-chart-line cert-icon"></i>
+                <div class="cert-content">
+                    <h3>Data Analytics Certification</h3>
+                    <p>Issued by XYZ Institute</p>
+                </div>
+                <button class="download-btn" onclick="downloadCertificate('3RD SEM.pdf')">
+                    <i class="fas fa-download"></i>
+                </button>
+            </div>
+
+            <div class="cert-card" data-name="Machine Learning">
+                <i class="fas fa-brain cert-icon"></i>
+                <div class="cert-content">
+                    <h3>Machine Learning with Python</h3>
+                    <p>Issued by ABC Academy</p>
+                </div>
+                <button class="download-btn" onclick="downloadCertificate('machine_learning.pdf')">
+                    <i class="fas fa-download"></i>
+                </button>
+            </div>
+
+            <div class="cert-card" data-name="Full Stack">
+                <i class="fas fa-code cert-icon"></i>
+                <div class="cert-content">
+                    <h3>Full-Stack Web Development</h3>
+                    <p>Issued by DEF Organization</p>
+                </div>
+                <button class="download-btn" onclick="downloadCertificate('full_stack.pdf')">
+                    <i class="fas fa-download"></i>
+                </button>
+            </div>
+
+            <div class="cert-card" data-name="AI">
+                <i class="fas fa-robot cert-icon"></i>
+                <div class="cert-content">
+                    <h3>AI & Deep Learning</h3>
+                    <p>Issued by PQR University</p>
+                </div>
+                <button class="download-btn" onclick="downloadCertificate('ai_deep_learning.pdf')">
+                    <i class="fas fa-download"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <canvas id="confetti"></canvas>
+
+    <script>
+        function filterCertifications() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            let certCards = document.querySelectorAll(".cert-card");
+            certCards.forEach(card => {
+                let name = card.getAttribute("data-name").toLowerCase();
+                card.style.display = name.includes(input) ? "flex" : "none";
+            });
+        }
+
+        function downloadCertificate(filename) {
+            let link = document.createElement("a");
+            link.href = filename; 
+            link.download = filename; 
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            triggerConfetti();
+        }
+
+        function triggerConfetti() {
+            let confettiSettings = { target: 'confetti', max: 80, size: 2, animate: true };
+            let confetti = new ConfettiGenerator(confettiSettings);
+            confetti.render();
+            setTimeout(() => confetti.clear(), 3000);
+        }
+    </script>
+
+</body>
+</html>

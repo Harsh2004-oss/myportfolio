@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <style>/* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+        }
+        
+        header {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             padding: 20px;
+             background-color: #1e1e1e;
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+             flex-direction: row-reverse; /* Reverse order of elements */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #ff9800;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ff9800;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.back-btn i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.back-btn:hover {
+    color: #ff9900;
+}
+
+        .back-btn:hover {
+            color: #ff9900;
+        }
+        
+        /* Skills Section */
+        .skills {
+            padding: 50px;
+            background: #1e1e1e;
+        }
+        
+        .skills h2 {
+            font-size: 2.2rem;
+            color: #ff9800;
+        }
+        
+        /* Skill Circles */
+        .skill-circles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .skill-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ff9800 0%, rgba(0, 0, 0, 0.9) 70%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: #ff9800;
+            transition: transform 0.3s;
+        }
+        
+        .skill-circle:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Skill Timeline */
+        .skill-timeline {
+            padding: 50px;
+            background: #181818;
+        }
+        
+        .skill-timeline h2 {
+            font-size: 2.2rem;
+            color: #ff9800;
+        }
+        
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .timeline-item {
+            background: #222;
+            padding: 15px;
+            border-radius: 10px;
+            width: 60%;
+            box-shadow: 0 4px 8px #ff9800;
+            transition: transform 0.3s;
+        }
+        
+        .timeline-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .year {
+            font-weight: bold;
+            color: #ff9800;
+        }
+        
+        /* Certifications */
+        .certifications {
+            padding: 50px;
+            background: #1e1e1e;
+        }
+        
+        .certifications h2 {
+            font-size: 2.2rem;
+            color: #ff9800;
+        }
+        
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+        
+        .cert-card {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px #ff9800;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .cert-card:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Projects */
+        .projects {
+            padding: 50px;
+            background: #181818;
+        }
+        
+        .projects h2 {
+            font-size: 2.2rem;
+            color: #ff9800;
+        }
+        
+        .projects ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .projects li {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px auto;
+            width: 65%;
+            box-shadow: 0 4px 8px #ff9800;
+            transition: transform 0.3s;
+        }
+        
+        .projects li:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline-item, .projects li {
+                width: 90%;
+            }
+        }
+        </style>
+    <header>
+        <a href="about.html" class="back-btn">⬅ About</a>
+       
+        <h1>My Skills</h1>
+    </header>
+    
+    
+    <section class="skills">
+        <h2>Skill Proficiency</h2>
+        <div class="skill-circles">
+            <div class="skill-circle">HTML<br>90%</div>
+            <div class="skill-circle">CSS<br>85%</div>
+            <div class="skill-circle">JavaScript<br>80%</div>
+            <div class="skill-circle">React<br>75%</div>
+            <div class="skill-circle">Node.js<br>70%</div>
+            <div class="skill-circle">MongoDB<br>65%</div>
+        </div>
+    </section>
+    
+    <section class="skill-timeline">
+        <h2>Skill Progression</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">2022</span>
+                <p>Started learning web development, focusing on HTML & CSS.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2023</span>
+                <p>Mastered JavaScript and started working with React.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2024</span>
+                <p>Diving into full-stack development with the MERN stack.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Frontend Development - XYZ Academy</li>
+            <li>JavaScript Advanced - ABC Institute</li>
+            <li>Full Stack Web Development - DEF Course</li>
+        </ul>
+    </section>
+    
+    <section class="projects">
+        <h2>Projects Related to Skills</h2>
+        <ul>
+            <li><strong>Portfolio Website:</strong> Showcasing frontend skills.</li>
+            <li><strong>Expense Tracker:</strong> Full-stack MERN project.</li>
+            <li><strong>E-commerce Store:</strong> Dynamic website with cart & payments.</li>
+        </ul>
+    </section>
+</body>
+</html>
